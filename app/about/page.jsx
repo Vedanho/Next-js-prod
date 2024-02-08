@@ -4,9 +4,9 @@ import React from "react";
 const HomePage = () => {
 	return (
 		<div>
-			<h1 className="text-5xl mb-8 font-bold">Next.js tutorial</h1>
-			<Link href="/client" className="btn btn-success">
-				Client Page
+			<h1 className="text-7xl">About Page</h1>
+			<Link href="/" className="text-2xl">
+				Home Page
 			</Link>
 		</div>
 	);
