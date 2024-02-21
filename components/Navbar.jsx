@@ -11,12 +11,12 @@ const links = [
 		label: "drinks",
 	},
 	{
-		href: "/tasks",
-		label: "tasks",
+		href: "/prisma-example",
+		label: "prisma",
 	},
 	{
-		href: "/query",
-		label: "query",
+		href: "/tasks",
+		label: "tasks",
 	},
 ];
 
@@ -30,7 +30,9 @@ const Navbar = () => {
 				<ul className="menu menu-horizontal md:ml-8">
 					{links.map(({ href, label }) => (
 						<li key={href}>
-							<Link href={href} className="capitalize">{label}</Link>
+							<Link href={href} className="capitalize">
+								{label}
+							</Link>
 						</li>
 					))}
 				</ul>
