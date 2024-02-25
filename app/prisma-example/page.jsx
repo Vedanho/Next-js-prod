@@ -3,6 +3,8 @@ import prisma from "../../utils/db";
 import TaskForm from "../../components/TaskForm";
 import TaskList from "../../components/TaskList";
 import TaskFormCustom from "../../components/TaskFormCustom";
+import { getAllTasks } from "../../utils/actions";
+export const dynamic = "force-dynamic";
 
 const prismaHandlers = async (content) => {
 	"use server";
@@ -22,7 +24,7 @@ const prismaHandlers = async (content) => {
 };
 
 const PrismaExamplePage = async () => {
-	const tasks = await prismaHandlers("wake up");
+	const tasks = await getAllTasks();
 	return (
 		<div className="max-w-lg">
 			<h1>PrismaExamplePage</h1>
